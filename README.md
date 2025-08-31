@@ -65,7 +65,7 @@ Before setting up the workflow, ensure you have:
    [Step-7]: <./Steps/webhook.md>
 
 
-## Usage 
+## Handling
 To get started with the CI/CD pipeline for our Java application, follow these steps:
 
 1. **Clone this Repository**: Clone this repository to your local development environment.
@@ -78,3 +78,26 @@ To get started with the CI/CD pipeline for our Java application, follow these st
 3. **Commit Your Code**: Add your Java application's source code to this repository, making sure it's organized in accordance with your project's structure.
 
 4. **Set Up Pipeline Triggers**: Configure GitHub webhooks to automatically trigger the pipeline with every code push, ensuring seamless integration and deployment.
+
+## Limitations
+
+1. **Scaling Issues** : Works fine for small apps, but builds/tests get slow as project size and dependencies grow.
+
+2. **Security Risks** : Credentials in Jenkins and public Docker images can expose vulnerabilities if not managed right.
+
+3. **No Rollback Strategy** : If deployment fails, you’re fucked unless you manually redeploy an older image.
+
+4. **Limited Testing** : Only basic unit/integration tests; no performance, security, or static code analysis unless you add extra tools.
+
+5. **Single Point of Failure** : If Jenkins server crashes, the whole pipeline is dead until it’s fixed.
+
+## Future Enhancements
+
+1. **Scalable Deployments (Kubernetes/Helm)** : Move from single-server Docker deployment to Kubernetes with Helm charts.
+Gives rolling updates, auto-scaling, and proper rollback support.
+
+2. **Advanced Testing Integration** : Add SonarQube for static code analysis, JaCoCo for coverage, JMeter for performance tests.
+Makes sure no buggy or insecure code slips through.
+
+3. **Security & Compliance** : Integrate vulnerability scanning (Trivy, Anchore) before pushing Docker images.
+Store secrets safely with Jenkins credentials plugin or HashiCorp Vault.
