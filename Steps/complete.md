@@ -9,13 +9,8 @@
 ```
 https://github.com/your-user-name/repo-name.git
 ```
-or you can use my repository URL
-```
-https://github.com/Ehg-00/pipeline-1.git
-```
 - Click 'Save'
 - Click 'Build Now'
-- For first time it will fail because we have to add `/home/ubuntu/jenkins_home/workspace/maven-project` instead of $PWD in the `build-jar.sh` file and `test.sh` file.
 - So we have to make changes in the `build-jar.sh` file and `test.sh` file , You can refer my repository for the changes.
 - After done the Changes , Build the project again
 - Now the project will be built successfully
@@ -26,9 +21,11 @@ https://github.com/Ehg-00/pipeline-1.git
 - If you see the output as 'Aborted' then check the error and fix it
 - May be you will find errors but keep troubleshooting , I also got errors many times
 
-![errors](https://github.com/mathesh-me/ci-cd-pipeline-docker-maven/assets/144098846/e88d82f2-5d4a-4847-83e6-0f96abfbaca5)
+<img width="1308" height="666" alt="image" src="https://github.com/user-attachments/assets/d5ade30e-c62e-4df0-a006-e038a53147fd" />
+
 
 
 ## Final Result
 
-![hw-3](https://github.com/mathesh-me/ci-cd-pipeline-docker-maven/assets/144098846/2af56b98-dea7-45cc-b4d2-fa019cdf99ca)
+<img width="1920" height="922" alt="pickchu" src="https://github.com/user-attachments/assets/17c1688b-cbaa-47d9-b252-8444f828c08b" />
+
